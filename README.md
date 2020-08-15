@@ -1,5 +1,9 @@
 # Spinach Components
 
+[![Current version](https://badge.fury.io/js/spinach-components.svg?style=flat)](https://badge.fury.io/js/spinach-components)
+[![deploy](https://img.shields.io/badge/deploy-🛳%20Ship.js-blue?style=flat)](https://github.com/algolia/shipjs)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://opensource.org/licenses/MIT)
+
 ## Usage
 
 ```bash
