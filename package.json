@@ -25,7 +25,7 @@
     "postbuild": "rimraf declaration",
     "declaration-build": "tsc -p tsconfig.declaration.json",
     "release": "shipjs prepare",
-    "type-check": "tsc --noEmit --incremental false",
+    "typecheck": "tsc --noEmit --incremental false",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook"
   },
