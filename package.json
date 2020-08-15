@@ -1,0 +1,29 @@
+{
+  "name": "spinach-components",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/tyankatsu0105/spinach-components#readme",
+  "bugs": {
+    "url": "https://github.com/tyankatsu0105/spinach-components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyankatsu0105/spinach-components.git"
+  },
+  "license": "MIT",
+  "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.46",
+    "react": "^16.13.1",
+    "typescript": "^3.9.7"
+  }
+}
