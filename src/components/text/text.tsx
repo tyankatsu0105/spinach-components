@@ -1,7 +1,9 @@
 import * as React from 'react'
 
-export type TextProps = {
-  text: string
+import { BaseProps } from "../../shared/types";
+
+export type TextProps = BaseProps & {
+  text: string;
 }
 
-export const Text = (props: TextProps) => <div>{props.text}</div>
+export const Text = (props: TextProps) => <div>{props.text}{props.className}</div>

@@ -27,11 +27,3 @@ export const Component = () => (
 
 There is an issue.  
 https://github.com/rollup/plugins/issues/287
-
-### Why does specify `incremental: false` at rollup.config.js?
-
-To avoid below error when running `rollup -c`
-
-```bash
-[!] (plugin typescript) Error: @rollup/plugin-typescript: 'dir' must be used when 'tsBuildInfoFile' or 'incremental' are specified.
-```

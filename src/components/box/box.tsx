@@ -1,4 +1,7 @@
 import * as React from 'react'
 
+import { BaseProps } from "../../shared/types";
 
-export const Box = () => <div>box</div>
+export type BoxProps = BaseProps;
+
+export const Box = (props: BoxProps) => <div>{props.children}</div>

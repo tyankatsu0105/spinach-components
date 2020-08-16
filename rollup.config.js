@@ -1,4 +1,4 @@
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 import dts from "rollup-plugin-dts";
 import { terser } from "rollup-plugin-terser";
 
@@ -19,9 +19,7 @@ const options = [
       },
     ],
     plugins: [
-      typescript({
-        incremental: false,
-      }),
+      typescript(),
       terser(),
     ],
   },

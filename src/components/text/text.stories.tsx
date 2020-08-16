@@ -14,6 +14,7 @@ const Template: Story<Component.TextProps> = (args) => <Component.Text {...args}
 
 export const Primary = Template.bind({});
 const primaryProps: Component.TextProps = {
-  text: 'abc'
+  text: 'abc',
+  className: 'a'
 }
 Primary.args = primaryProps;
