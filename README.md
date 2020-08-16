@@ -27,3 +27,23 @@ export const Component = () => (
 
 There is an issue.  
 https://github.com/rollup/plugins/issues/287
+
+### Why do not use path alias?
+
+type becomes any, if use path alias.
+I don't know this happen
+
+```tsx
+// text.tsx
+import { BaseProps } from '~shared/types';
+
+export TextProps = BaseProps & {
+  text: string
+}
+```
+
+```tsx
+// text.stories.tsx
+import { TextProps } from "./text";
+// type TextProps = any ←!?!?!?!?
+```
