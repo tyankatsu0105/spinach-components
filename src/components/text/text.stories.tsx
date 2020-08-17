@@ -1,14 +1,13 @@
 import * as React from 'react';
 
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story } from '@storybook/react/types-6-0';
+import { filename } from "paths.macro";
+
+import { storybookMeta } from "../../shared/helpers";
 
 import * as Component from './text';
 
-
-export default {
-  title: 'Text',
-  component: Component.Text
-} as Meta;
+export default storybookMeta(filename)
 
 const Template: Story<Component.TextProps> = (args) => <Component.Text {...args} />;
 
