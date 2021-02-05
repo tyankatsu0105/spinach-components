@@ -1,2 +1,2 @@
 export * from './box';
-export * from './text';
+export * as Text from './text';
