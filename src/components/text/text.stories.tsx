@@ -1,21 +1,38 @@
-import * as React from 'react';
+import * as React from "react";
+import * as ReactRouterDom from "react-router-dom";
 
-import { Story } from '@storybook/react/types-6-0';
+import { Story } from "@storybook/react/types-6-0";
 import { filename } from "paths.macro";
 
 import { storybookMeta } from "../../shared/helpers";
 
 import * as Text from "./text";
-type Props = React.PropsWithChildren<Text.Props>
+type Props = React.ComponentProps<typeof Text.Component>;
 
-export default storybookMeta(filename, { component: Text.Component });
+export default storybookMeta(filename, {
+  component: Text.Component,
+  argTypes: {
+    textSize: { control: { type: 'select', options: Object.keys(Text.sizeMap) } },
+    children: { control: "text" },
+  },
+});
 
-const Template: Story<Props> = (args) => <Text.Component size={args.size} as={args.as}>{args.children}</Text.Component>;
+const Template: Story<Props> = (args) => (
+  <Text.Component {...args}>{args.children}</Text.Component>
+);
 
-export const Primary = Template.bind({});
-const primaryProps: Props = {
-  as: 'h1',
-  size: 'h1',
-  children: 'text'
-}
-Primary.args = primaryProps;
+export const Normal = Template.bind({});
+const normalProps: Props = {
+  children: "text",
+  textSize: "body",
+};
+Normal.args = normalProps;
+
+export const InjectedComponent = Template.bind({});
+const injectedComponentProps: Props = {
+  children: "text",
+  textSize: "body",
+  component: ReactRouterDom.NavLink,
+  to: 'https://example.com'
+};
+InjectedComponent.args = injectedComponentProps;
