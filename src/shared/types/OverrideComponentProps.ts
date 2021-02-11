@@ -1,3 +1,7 @@
+/**
+ * Inspired by https://github.com/mui-org/material-ui/blob/v5.0.0-alpha.24/packages/material-ui/src/OverridableComponent.d.ts
+ */
+
 import * as React from "react";
 
 export interface OverridableComponent<Map extends OverridableTypeMap> {

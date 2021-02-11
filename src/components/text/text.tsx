@@ -27,7 +27,7 @@ type FeatureProps = {
    * Relative size value
    * @default 'body'
    */
-  textSize?: keyof typeof sizeMap;
+  readonly textSize?: keyof typeof sizeMap;
 }
 
 
