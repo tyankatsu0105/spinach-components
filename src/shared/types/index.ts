@@ -1,2 +1,2 @@
-export * from './SpinachComponent'
-export * from './OverrideComponentProps'
+export * from './SpinachComponent';
+export * from './OverrideComponentProps';

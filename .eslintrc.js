@@ -1,6 +1,6 @@
-const OFF = 'off'
-const ERROR = 'error'
-const WARN = 'warn'
+const OFF = 'off';
+const ERROR = 'error';
+const WARN = 'warn';
 
 module.exports = {
   env: {
@@ -9,22 +9,24 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect"
-    }
+      version: 'detect',
+    },
   },
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
   ],
   rules: {
     /**
      * Don't use PropsTypes
      */
-    'react/prop-types': OFF
-  }
-}
+    'react/prop-types': OFF,
+
+    '@typescript-eslint/ban-types': WARN,
+  },
+};

@@ -2,10 +2,14 @@
  * Inspired by https://github.com/mui-org/material-ui/blob/v5.0.0-alpha.24/packages/material-ui/src/OverridableComponent.d.ts
  */
 
-import * as React from "react";
+import * as React from 'react';
 
 export interface OverridableComponent<Map extends OverridableTypeMap> {
-  <Component extends React.ElementType>(props: DefaultComponentProps<Map> & { component?: Component } & OverrideComponentProps<Map, Component>): JSX.Element;
+  <Component extends React.ElementType>(
+    props: DefaultComponentProps<Map> & {
+      component?: Component;
+    } & OverrideComponentProps<Map, Component>
+  ): JSX.Element;
 }
 
 /**
@@ -14,14 +18,19 @@ export interface OverridableComponent<Map extends OverridableTypeMap> {
 type OverrideComponentProps<
   Map extends OverridableTypeMap,
   Component extends React.ElementType
-> = BaseProps<Map> & Omit<React.ComponentPropsWithRef<Component>, keyof CommonProps>;
+> = BaseProps<Map> &
+  Omit<React.ComponentPropsWithRef<Component>, keyof CommonProps>;
 
 /**
  * NOT `component={Component}`
  */
-type DefaultComponentProps<Map extends OverridableTypeMap> = BaseProps<Map> & Omit<React.ComponentPropsWithRef<Map["defaultComponent"]>, keyof BaseProps<Map>>;
+type DefaultComponentProps<Map extends OverridableTypeMap> = BaseProps<Map> &
+  Omit<
+    React.ComponentPropsWithRef<Map['defaultComponent']>,
+    keyof BaseProps<Map>
+  >;
 
-type BaseProps<Map extends OverridableTypeMap> = Map["props"] & CommonProps;
+type BaseProps<Map extends OverridableTypeMap> = Map['props'] & CommonProps;
 
 interface CommonProps {
   className?: string;
@@ -34,8 +43,6 @@ interface OverridableTypeMap {
 }
 
 export type TypeMap<DefaultComponent extends React.ElementType, Props = {}> = {
-  defaultComponent: DefaultComponent,
-  props: Props,
-}
-
-
+  defaultComponent: DefaultComponent;
+  props: Props;
+};

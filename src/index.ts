@@ -1,2 +1,2 @@
-export * from './components'
-export * from './shared/types'
+export * from './components';
+export * from './shared/types';
