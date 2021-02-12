@@ -2,21 +2,9 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { SpinachComponent } from "../../shared/types/SpinachComponent";
-// --------------------------------------------
-// setups
-// --------------------------------------------
 
+import * as Helpers from "./helpers";
 
-const sizeMap = {
-  h1: "6rem",
-  h2: "3.75rem",
-  h3: "3rem",
-  h4: "2.125rem",
-  h5: "1.5rem",
-  h6: "1.25rem",
-  subtitle: "1rem",
-  body: "0.875rem",
-};
 
 // --------------------------------------------
 // props
@@ -27,7 +15,7 @@ type FeatureProps = {
    * Relative size value
    * @default 'body'
    */
-  readonly textSize?: keyof typeof sizeMap;
+  readonly textSize?: keyof typeof Helpers.sizeMap;
 }
 
 
@@ -45,7 +33,7 @@ const Component: SpinachComponent<'p', FeatureProps> = (props) => {
 // styles
 // --------------------------------------------
 const StyledElement = styled.p<FeatureProps>`
-  font-size: ${(props) => props.textSize && sizeMap[props.textSize]};
+  font-size: ${(props) => props.textSize && Helpers.sizeMap[props.textSize]};
 `;
 
-export { FeatureProps, Component, sizeMap };
+export { FeatureProps, Component };

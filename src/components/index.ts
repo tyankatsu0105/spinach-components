@@ -1,1 +1,1 @@
-export * as Text from './text';
+export {Component as Text, FeatureProps as TextProps} from './text';
