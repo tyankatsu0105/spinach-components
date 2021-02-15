@@ -1,4 +1,4 @@
-import { OverridableComponent, TypeMap } from './OverrideComponentProps';
+import { OverridableComponent, TypeMap } from './OverridableComponent';
 
 type IntrinsicElementsKeys = keyof JSX.IntrinsicElements;
 
