@@ -9,15 +9,21 @@ import { storybookMeta } from '../../shared/helpers';
 import * as Text from './text';
 type Props = React.ComponentProps<typeof Text.Component>;
 
-export default storybookMeta(filename, {
-  component: Text.Component,
-  argTypes: {
-    textSize: {
-      control: { type: 'select', options: Object.keys(Text.sizeMap) },
-    },
-    children: { control: 'text' },
+export default storybookMeta(
+  {
+    filename,
+    group: 'Components',
   },
-});
+  {
+    component: Text.Component,
+    argTypes: {
+      textSize: {
+        control: { type: 'select', options: Object.keys(Text.sizeMap) },
+      },
+      children: { control: 'text' },
+    },
+  }
+);
 
 const Template: Story<Props> = (args) => (
   <Text.Component {...args}>{args.children}</Text.Component>

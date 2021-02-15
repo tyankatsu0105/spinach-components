@@ -10,16 +10,22 @@ import * as Link from './link';
 import * as Text from '../text';
 type Props = React.ComponentProps<typeof Link.Component>;
 
-export default storybookMeta(filename, {
-  component: Link.Component,
-  argTypes: {
-    textSize: {
-      control: { type: 'select', options: Object.keys(Text.sizeMap) },
-    },
-    href: { control: 'text' },
-    children: { control: 'text' },
+export default storybookMeta(
+  {
+    filename,
+    group: 'Components',
   },
-});
+  {
+    component: Link.Component,
+    argTypes: {
+      textSize: {
+        control: { type: 'select', options: Object.keys(Text.sizeMap) },
+      },
+      href: { control: 'text' },
+      children: { control: 'text' },
+    },
+  }
+);
 
 const Template: Story<Props> = (args) => (
   <Link.Component {...args}>{args.children}</Link.Component>
