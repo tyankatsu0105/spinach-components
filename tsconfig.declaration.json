@@ -3,5 +3,6 @@
   "compilerOptions": {
     "declaration": true,
     "outDir": "./declaration"
-  }
+  },
+  "exclude": ["**/*.stories.*"]
 }

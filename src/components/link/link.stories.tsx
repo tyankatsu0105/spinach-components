@@ -10,10 +10,15 @@ import * as Link from './link';
 import * as Text from '../text';
 type Props = React.ComponentProps<typeof Link.Component>;
 
+import readme from './README.md';
+
 export default storybookMeta(
   {
-    filename,
-    group: 'Components',
+    title: {
+      filename,
+      group: 'Components',
+    },
+    readme,
   },
   {
     component: Link.Component,

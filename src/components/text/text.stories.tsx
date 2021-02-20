@@ -6,13 +6,18 @@ import { filename } from 'paths.macro';
 
 import { storybookMeta } from '../../shared/helpers';
 
-import * as Text from './text';
+import * as Text from './index';
 type Props = React.ComponentProps<typeof Text.Component>;
+
+import readme from './README.md';
 
 export default storybookMeta(
   {
-    filename,
-    group: 'Components',
+    title: {
+      filename,
+      group: 'Components',
+    },
+    readme,
   },
   {
     component: Text.Component,

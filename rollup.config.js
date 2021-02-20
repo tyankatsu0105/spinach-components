@@ -1,34 +1,36 @@
-import typescript from "rollup-plugin-typescript2";
-import dts from "rollup-plugin-dts";
-import { terser } from "rollup-plugin-terser";
+import typescript from 'rollup-plugin-typescript2';
+import dts from 'rollup-plugin-dts';
+import { terser } from 'rollup-plugin-terser';
 
-const packageJson = require("./package.json");
+const packageJson = require('./package.json');
 
 /** @type import('rollup').RollupOptions[] */
 const options = [
   {
-    input: "src/index.ts",
+    input: 'src/index.ts',
     output: [
       {
         file: packageJson.main,
-        format: "cjs",
+        format: 'cjs',
       },
       {
         file: packageJson.module,
-        format: "esm",
+        format: 'esm',
       },
     ],
     plugins: [
-      typescript(),
+      typescript({
+        tsconfig: 'tsconfig.build.json',
+      }),
       terser(),
     ],
   },
   {
-    input: "./declaration/src/index.d.ts",
+    input: './declaration/src/index.d.ts',
     output: [
       {
-        file: "dist/index.d.ts",
-        format: "es",
+        file: 'dist/index.d.ts',
+        format: 'es',
       },
     ],
     plugins: [dts()],
