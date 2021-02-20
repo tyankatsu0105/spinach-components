@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/tyankatsu0105/spinach-components/compare/v0.1.1...v0.2.0) (2021-02-20)
+
+
+### Features
+
+* palette ([1c30a58](https://github.com/tyankatsu0105/spinach-components/commit/1c30a5854b1cb6f2843e3f801104951da69dd535))
+
+
+
 ## [0.1.1](https://github.com/tyankatsu0105/spinach-components/compare/v0.1.0...v0.1.1) (2021-02-11)
 
 

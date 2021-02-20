@@ -7,9 +7,14 @@ import { storybookMeta } from '../../shared/helpers';
 
 import { theme } from '../styles/theme';
 
+import readme from './README.md';
+
 export default storybookMeta({
-  filename,
-  group: 'Theme',
+  title: {
+    filename,
+    group: 'Theme',
+  },
+  readme,
 });
 
 export const Palettes = (): React.ReactElement => (
