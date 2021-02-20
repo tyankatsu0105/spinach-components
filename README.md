@@ -11,13 +11,11 @@ npm i spinach-components
 ```
 
 ```tsx
-import * as React from "react";
-import * as SpinachComponents from "spinach-components";
+import * as React from 'react';
+import * as SpinachComponents from 'spinach-components';
 
 export const Component = () => (
-  <SpinachComponents.Box>
-    <SpinachComponents.Text text="text" />
-  </SpinachComponents.Box>
+  <SpinachComponnets.Text textSize="h1">text</SpinachComponnets.Text>
 );
 ```
 
@@ -44,6 +42,6 @@ export TextProps = BaseProps & {
 
 ```tsx
 // text.stories.tsx
-import { TextProps } from "./text";
+import { TextProps } from './text';
 // type TextProps = any ←!?!?!?!?
 ```
